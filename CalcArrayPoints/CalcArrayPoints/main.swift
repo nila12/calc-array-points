@@ -15,6 +15,40 @@ create 4 functions for add, subtract, multiply, divide
 create a function that expects one of them along with 2 ints; aka a generic math operation function, it should take 2 ints and pass them to the function and return the result
 */
 
+func add(firstNum first: Int, secondNum sec: Int) {// -> Int {
+    
+    print ("\(first) + \(sec) = \(first + sec)")
+    
+    //return 1;
+}
+
+func subtract(firstNum first: Int, secondNum sec: Int) {// -> Int {
+    
+    print ("\(first) - \(sec) = \(first - sec)")
+    
+    //return 1;
+}
+
+func multiply(firstNum first: Int, secondNum sec: Int) {// -> Int {
+    
+    print ("\(first) * \(sec) = \(first * sec)")
+    
+    //return 1;
+}
+
+func divide(firstNum first: Int, secondNum sec: Int) {// -> Int {
+    
+    print ("\(first) / \(sec) = \(first / sec)")
+    
+    //return 1;
+}
+
+func basicOperation(firstNum first: Int, secondNum sec: Int, operation: (Int, Int) -> Void) {
+    
+    print(operation(first, sec))
+}
+
+
 /*
 create two new functions for add/multiply
     instead of taking 2 ints, take an array of ints; return result of (adding/multiplying) all of the elements
@@ -23,6 +57,8 @@ create two new functions for add/multiply
  
  refactor all four down to another generic math operation approach (like in previous part)
  */
+
+
 
 
 /*
