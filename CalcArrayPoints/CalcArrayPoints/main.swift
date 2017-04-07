@@ -98,7 +98,15 @@ func arrOperation(arr: [Int], arrOperation: ([Int]) -> Int) -> Int {
     (1,2)-(3,4)=(-2,-2)
  */
 
+func addPoints(firstTuple: (xa: Int, ya: Int), secondTuple: (xb: Int, yb: Int)) -> (x: Int, y: Int) {
+    
+    return (firstTuple.xa + secondTuple.xb, firstTuple.ya + secondTuple.yb)
+}
 
+func subtractPoints(firstTuple: (xa: Int, ya: Int), secondTuple: (xb: Int, yb: Int)) -> (x: Int, y: Int) {
+    
+    return (firstTuple.xa - secondTuple.xb, firstTuple.ya - secondTuple.yb)
+}
 
 
 /*
@@ -110,3 +118,9 @@ func arrOperation(arr: [Int], arrOperation: ([Int]) -> Int) -> Int {
  
  handle dictionaries with Double values without crashing
  */
+
+
+
+
+
+
