@@ -74,7 +74,7 @@ func count(arr: [Int]) -> Int {
     return arr.count
 }
 
-func avg(arr: [Int]) -> Int { //can i use my addArr func???
+func avg(arr: [Int]) -> Int { //can i use my addArr func??? YES
     var sum = 0;
     
     for num in arr {
@@ -90,7 +90,6 @@ func arrOperation(arr: [Int], arrOperation: ([Int]) -> Int) -> Int {
     
 }
 
-
 /*
  use tuples to represent x/y pairs
  
@@ -98,16 +97,15 @@ func arrOperation(arr: [Int], arrOperation: ([Int]) -> Int) -> Int {
     (1,2)-(3,4)=(-2,-2)
  */
 
-func addPoints(firstTuple: (xa: Int, ya: Int), secondTuple: (xb: Int, yb: Int)) -> (x: Int, y: Int) {
+func addPoints(p1: (xa: Int, ya: Int), p2: (xb: Int, yb: Int)) -> (x: Int, y: Int) {
     
-    return (firstTuple.xa + secondTuple.xb, firstTuple.ya + secondTuple.yb)
+    return (p1.xa + p2.xb, p1.ya + p2.yb)
 }
 
-func subtractPoints(firstTuple: (xa: Int, ya: Int), secondTuple: (xb: Int, yb: Int)) -> (x: Int, y: Int) {
+func subtractPoints(p1: (xa: Int, ya: Int), p2: (xb: Int, yb: Int)) -> (x: Int, y: Int) {
     
-    return (firstTuple.xa - secondTuple.xb, firstTuple.ya - secondTuple.yb)
+    return (p1.xa - p2.xb, p1.ya - p2.yb)
 }
-
 
 /*
  now use Dictionaries to represent points; "x" is x coor, "y" is y coor
@@ -119,7 +117,13 @@ func subtractPoints(firstTuple: (xa: Int, ya: Int), secondTuple: (xb: Int, yb: I
  handle dictionaries with Double values without crashing
  */
 
+func addDict() {
+    
+}
 
+func subtract() {
+    
+}
 
 
 
