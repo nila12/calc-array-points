@@ -117,12 +117,28 @@ func subtractPoints(p1: (xa: Int, ya: Int), p2: (xb: Int, yb: Int)) -> (x: Int, 
  handle dictionaries with Double values without crashing
  */
 
-func addDict() {
+func add(p1: ([String : Double]), p2: ([String : Double])) -> [String : Double] {
     
+    // access "x" and "y" keys to get their values and return a dictionary with appropriately updated values
+    
+    /*
+     let dictionaryIntTest2 = [
+     "x" : 5,
+     "y" : 4
+     ]
+     
+     let addPointDictionaryResult = add(p1: dictionaryIntTest1, p2: dictionaryIntTest2)!
+ 
+ */
+    
+    //DONT CRASH ON NIL..???
+    
+    return ["x" : p1["x"]! + p2["x"]!, "y" : p1["y"]! + p2["y"]!]
 }
 
-func subtract() {
+func subtract(p1: ([String : Double]), p2: ([String : Double])) -> [String : Double] {
     
+    return ["x" : p1["x"]! - p2["x"]!, "y" : p1["y"]! - p2["y"]!]
 }
 
 
