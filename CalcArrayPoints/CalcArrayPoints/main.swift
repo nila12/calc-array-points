@@ -117,7 +117,7 @@ func subtractPoints(p1: (xa: Int, ya: Int), p2: (xb: Int, yb: Int)) -> (x: Int, 
  handle dictionaries with Double values without crashing
  */
 
-func add(p1: ([String : Double]), p2: ([String : Double])) -> [String : Double] {
+func add(p1: ([String : Double])?, p2: ([String : Double])?) -> [String : Double] {
     
     // access "x" and "y" keys to get their values and return a dictionary with appropriately updated values
     
@@ -133,7 +133,17 @@ func add(p1: ([String : Double]), p2: ([String : Double])) -> [String : Double] 
     
     //DONT CRASH ON NIL..???
     
-    return ["x" : p1["x"]! + p2["x"]!, "y" : p1["y"]! + p2["y"]!]
+    if (p1 != nil && p2 != nil) {
+        return ["x" : p1!["x"]! + p2!["x"]!, "y" : p1!["y"]! + p2!["y"]!]
+
+    } else {
+        print ("At least one passed in dictionary was nil; returning empty point 0.0")
+        
+        return ["Empty Point" : 0.0];
+    }
+    
+    
+    //return ["x" : p1["x"]! + p2["x"]!, "y" : p1["y"]! + p2["y"]!]
 }
 
 func subtract(p1: ([String : Double]), p2: ([String : Double])) -> [String : Double] {
