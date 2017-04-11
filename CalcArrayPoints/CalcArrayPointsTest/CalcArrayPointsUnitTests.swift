@@ -78,26 +78,26 @@ class CalcArrayPointsUnitTests: XCTestCase {
     
     //
     // MARK: Part 3
-    // 
+    //
     
     func testPoints() {
         let testPoint1 = (2, 6)
         let testPoint2 = (5, 4)
         let dictionaryIntTest1 = [
-                "x" : 2,
-                "y" : 6
+            "x" : 2,
+            "y" : 6
         ]
         let dictionaryIntTest2 = [
-                "x" : 5,
-                "y" : 4
+            "x" : 5,
+            "y" : 4
         ]
         let dictionaryDoubleTest1 = [
-                "x" : 2.6,
-                "y" : 3.5
+            "x" : 2.6,
+            "y" : 3.5
         ]
         let dictionaryDoubleTest2 = [
-                "x" : 5.5,
-                "y" : 4.5
+            "x" : 5.5,
+            "y" : 4.5
         ]
         
         let addPointResult = add(p1: testPoint1, p2: testPoint2)
@@ -114,11 +114,11 @@ class CalcArrayPointsUnitTests: XCTestCase {
         
         let addPointDoubleDictionaryTest = add(p1: dictionaryDoubleTest1, p2: dictionaryDoubleTest2)!
         XCTAssert(addPointDoubleDictionaryTest["x"]! == 8.1
-                  && addPointDoubleDictionaryTest["y"]! == 8.0)
+            && addPointDoubleDictionaryTest["y"]! == 8.0)
         
         let subtractPointDoubleDictionaryTest = subtract(p1: dictionaryDoubleTest1, p2: dictionaryDoubleTest2)!
         XCTAssert(subtractPointDoubleDictionaryTest["x"]! == -2.9
-                  && subtractPointDoubleDictionaryTest["y"]! == -1.0)
+            && subtractPointDoubleDictionaryTest["y"]! == -1.0)
         
         // don't crash on nil
         let nilEntryDict : Dictionary<String, Double>? = nil
@@ -137,9 +137,11 @@ class CalcArrayPointsUnitTests: XCTestCase {
     }
     
     /**
-     * For some reason this is an objective-c only test macro 
+     * For some reason this is an objective-c only test macro
      * Apple docs for objective-c version: https://developer.apple.com/reference/xctest/xctassertnothrow
+     
      * The (modified) solution below was found here: http://jernejstrasner.com/2015/07/08/testing-throwable-methods-in-swift-2.html
+     
      */
     func XCTAssertNoThrow<T>(_ expression: @autoclosure () throws -> T, _ message: String = "", file: StaticString = #file, line: UInt = #line) {
         do {
