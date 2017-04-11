@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0EDCAA771E96DAE700354334 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCAA761E96DAE700354334 /* main.swift */; };
+		0EDCAA8A1E9C49F900354334 /* CalcArrayPointsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCAA891E9C49F900354334 /* CalcArrayPointsUnitTests.swift */; };
+		0EDCAA8B1E9C4C5C00354334 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCAA761E96DAE700354334 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +27,20 @@
 /* Begin PBXFileReference section */
 		0EDCAA731E96DAE700354334 /* CalcArrayPoints */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CalcArrayPoints; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EDCAA761E96DAE700354334 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0EDCAA811E9C48DA00354334 /* CalcArrayPointsTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcArrayPointsTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EDCAA851E9C48DA00354334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EDCAA891E9C49F900354334 /* CalcArrayPointsUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalcArrayPointsUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0EDCAA701E96DAE700354334 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EDCAA7E1E9C48DA00354334 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				0EDCAA751E96DAE700354334 /* CalcArrayPoints */,
+				0EDCAA821E9C48DA00354334 /* CalcArrayPointsTest */,
 				0EDCAA741E96DAE700354334 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				0EDCAA731E96DAE700354334 /* CalcArrayPoints */,
+				0EDCAA811E9C48DA00354334 /* CalcArrayPointsTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +74,15 @@
 				0EDCAA761E96DAE700354334 /* main.swift */,
 			);
 			path = CalcArrayPoints;
+			sourceTree = "<group>";
+		};
+		0EDCAA821E9C48DA00354334 /* CalcArrayPointsTest */ = {
+			isa = PBXGroup;
+			children = (
+				0EDCAA891E9C49F900354334 /* CalcArrayPointsUnitTests.swift */,
+				0EDCAA851E9C48DA00354334 /* Info.plist */,
+			);
+			path = CalcArrayPointsTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +105,23 @@
 			productReference = 0EDCAA731E96DAE700354334 /* CalcArrayPoints */;
 			productType = "com.apple.product-type.tool";
 		};
+		0EDCAA801E9C48DA00354334 /* CalcArrayPointsTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EDCAA881E9C48DA00354334 /* Build configuration list for PBXNativeTarget "CalcArrayPointsTest" */;
+			buildPhases = (
+				0EDCAA7D1E9C48DA00354334 /* Sources */,
+				0EDCAA7E1E9C48DA00354334 /* Frameworks */,
+				0EDCAA7F1E9C48DA00354334 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CalcArrayPointsTest;
+			productName = CalcArrayPointsTest;
+			productReference = 0EDCAA811E9C48DA00354334 /* CalcArrayPointsTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +133,10 @@
 				ORGANIZATIONNAME = "Mathi Manavalan";
 				TargetAttributes = {
 					0EDCAA721E96DAE700354334 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					0EDCAA801E9C48DA00354334 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -111,9 +155,20 @@
 			projectRoot = "";
 			targets = (
 				0EDCAA721E96DAE700354334 /* CalcArrayPoints */,
+				0EDCAA801E9C48DA00354334 /* CalcArrayPointsTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0EDCAA7F1E9C48DA00354334 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0EDCAA6F1E96DAE700354334 /* Sources */ = {
@@ -121,6 +176,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EDCAA771E96DAE700354334 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EDCAA7D1E9C48DA00354334 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EDCAA8B1E9C4C5C00354334 /* main.swift in Sources */,
+				0EDCAA8A1E9C49F900354334 /* CalcArrayPointsUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +295,32 @@
 			};
 			name = Release;
 		};
+		0EDCAA861E9C48DA00354334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CalcArrayPointsTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Mathi.CalcArrayPointsTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0EDCAA871E9C48DA00354334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CalcArrayPointsTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Mathi.CalcArrayPointsTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -248,6 +338,15 @@
 			buildConfigurations = (
 				0EDCAA7B1E96DAE700354334 /* Debug */,
 				0EDCAA7C1E96DAE700354334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EDCAA881E9C48DA00354334 /* Build configuration list for PBXNativeTarget "CalcArrayPointsTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EDCAA861E9C48DA00354334 /* Debug */,
+				0EDCAA871E9C48DA00354334 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

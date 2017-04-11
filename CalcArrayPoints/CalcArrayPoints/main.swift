@@ -15,27 +15,27 @@ create 4 functions for add, subtract, multiply, divide
 create a function that expects one of them along with 2 ints; aka a generic math operation function, it should take 2 ints and pass them to the function and return the result
 */
 
-func add(firstNum first: Int, secondNum sec: Int) -> Int {
+func add(left first: Int, right sec: Int) -> Int {
     
     return (first + sec)
 }
 
-func subtract(firstNum first: Int, secondNum sec: Int) -> Int {
+func subtract(left first: Int, right sec: Int) -> Int {
     
     return (first - sec)
 }
 
-func multiply(firstNum first: Int, secondNum sec: Int) -> Int {
+func multiply(left first: Int, right sec: Int) -> Int {
     
     return (first * sec)
 }
 
-func divide(firstNum first: Int, secondNum sec: Int) -> Int {
+func divide(left first: Int, right sec: Int) -> Int {
     
     return (first / sec)
 }
 
-func basicOperation(firstNum first: Int, secondNum sec: Int, operation: (Int, Int) -> Int) -> Int {
+func mathOperation(left first: Int, right sec: Int, operation: (Int, Int) -> Int) -> Int {
     
     return(operation(first, sec)) //just number or "result" text???
 }
@@ -50,43 +50,43 @@ create two new functions for add/multiply
  refactor all four down to another generic math operation approach (like in previous part)
  */
 
-func addArr(arr: [Int]) -> Int {
+func add(array: [Int]) -> Int {
     var sum = 0;
     
-    for num in arr {
+    for num in array {
         sum += num;
     }
     
     return sum
 }
 
-func multiplyArr(arr: [Int]) -> Int {
+func multiply(array: [Int]) -> Int {
     var sum = 1;
     
-    for num in arr {
+    for num in array {
         sum *= num;
     }
     
     return sum
 }
 
-func count(arr: [Int]) -> Int {
-    return arr.count
+func count(array: [Int]) -> Int {
+    return array.count
 }
 
-func avg(arr: [Int]) -> Int { //can i use my addArr func??? YES
+func average(array: [Int]) -> Int { //can i use my addArr func??? YES
     var sum = 0;
     
-    for num in arr {
+    for num in array {
         sum += num;
     }
     
-    return sum / arr.count
+    return sum / array.count
 }
 
-func arrOperation(arr: [Int], arrOperation: ([Int]) -> Int) -> Int {
+func reduce(array: [Int], operation: ([Int]) -> Int) -> Int {
     
-    return arrOperation(arr)
+    return operation(array)
     
 }
 
@@ -97,12 +97,12 @@ func arrOperation(arr: [Int], arrOperation: ([Int]) -> Int) -> Int {
     (1,2)-(3,4)=(-2,-2)
  */
 
-func addPoints(p1: (xa: Int, ya: Int), p2: (xb: Int, yb: Int)) -> (x: Int, y: Int) {
+func add(p1: (xa: Int, ya: Int), p2: (xb: Int, yb: Int)) -> (x: Int, y: Int) {
     
     return (p1.xa + p2.xb, p1.ya + p2.yb)
 }
 
-func subtractPoints(p1: (xa: Int, ya: Int), p2: (xb: Int, yb: Int)) -> (x: Int, y: Int) {
+func subtract(p1: (xa: Int, ya: Int), p2: (xb: Int, yb: Int)) -> (x: Int, y: Int) {
     
     return (p1.xa - p2.xb, p1.ya - p2.yb)
 }
@@ -117,7 +117,7 @@ func subtractPoints(p1: (xa: Int, ya: Int), p2: (xb: Int, yb: Int)) -> (x: Int, 
  handle dictionaries with Double values without crashing
  */
 
-func add(p1: ([String : Double])?, p2: ([String : Double])?) -> [String : Double] {
+func add(p1: ([String : Double])?, p2: ([String : Double])?) -> [String : Double]? {
     
     // access "x" and "y" keys to get their values and return a dictionary with appropriately updated values
     
@@ -131,26 +131,175 @@ func add(p1: ([String : Double])?, p2: ([String : Double])?) -> [String : Double
  
  */
     
-    //DONT CRASH ON NIL..???
-    
     if (p1 != nil && p2 != nil) {
+        
+        //if p1!["x"] is Int
+        /*
+        let x1 = p1!["x"]!// as! Double
+        let x2 = p2!["x"]!// as! Double
+        let y1 = p1!["y"]!// as! Double
+        let y2 = p2!["y"]! //as! Double
+        */
+ 
+        
+        /*let x1 = Double(p1!["x"])
+        let x2 = Double(p2!["x"])
+        
+        let y1 = Double(p1!["y"])
+        let y2 = Double(p2!["y"])
+        */
+        
         return ["x" : p1!["x"]! + p2!["x"]!, "y" : p1!["y"]! + p2!["y"]!]
 
     } else {
-        print ("At least one passed in dictionary was nil; returning empty point 0.0")
+        print ("At least one passed in dictionary was nil; returning empty point 0")
         
-        return ["Empty Point" : 0.0];
+        return ["Empty Point" : 0];
     }
     
     
     //return ["x" : p1["x"]! + p2["x"]!, "y" : p1["y"]! + p2["y"]!]
 }
 
-func subtract(p1: ([String : Double]), p2: ([String : Double])) -> [String : Double] {
+func add(p1: ([String : Int])?, p2: ([String : Int])?) -> [String : Int]? {
     
-    return ["x" : p1["x"]! - p2["x"]!, "y" : p1["y"]! - p2["y"]!]
+    if (p1 != nil && p2 != nil) {
+        
+        //if p1!["x"] is Int
+        
+        /*let x1 = p1!["x"]!// as! Double
+        let x2 = p2!["x"]!// as! Double
+        let y1 = p1!["y"]!// as! Double
+        let y2 = p2!["y"]! //as! Double
+ */
+        
+        
+        /*let x1 = Double(p1!["x"])
+         let x2 = Double(p2!["x"])
+         
+         let y1 = Double(p1!["y"])
+         let y2 = Double(p2!["y"])
+         */
+        
+        return ["x" : p1!["x"]! + p2!["x"]!, "y" : p1!["y"]! + p2!["y"]!]
+        
+        //return ["x" : x1 + x2, "y" : y1 + y2]
+        
+    } else {
+        print ("At least one passed in dictionary was nil; returning empty point 0")
+        
+        return ["Empty Point" : 0];
+    }
+    
+    
+    //return ["x" : p1["x"]! + p2["x"]!, "y" : p1["y"]! + p2["y"]!]
 }
 
+func subtract(p1: ([String : Double])?, p2: ([String : Double])?) -> [String : Double]? {
+    
+    // access "x" and "y" keys to get their values and return a dictionary with appropriately updated values
+    
+    /*
+     let dictionaryIntTest2 = [
+     "x" : 5,
+     "y" : 4
+     ]
+     
+     let addPointDictionaryResult = add(p1: dictionaryIntTest1, p2: dictionaryIntTest2)!
+     
+     */
+    
+    if (p1 != nil && p2 != nil) {
+        
+        //if p1!["x"] is Int
+        
+        /*let x1 = p1!["x"]!// as! Double
+        let x2 = p2!["x"]!// as! Double
+        let y1 = p1!["y"]!// as! Double
+        let y2 = p2!["y"]! //as! Double
+ */
+        
+        
+        /*let x1 = Double(p1!["x"])
+         let x2 = Double(p2!["x"])
+         
+         let y1 = Double(p1!["y"])
+         let y2 = Double(p2!["y"])
+         */
+        
+        return ["x" : p1!["x"]! - p2!["x"]!, "y" : p1!["y"]! - p2!["y"]!]
+        
+        //return ["x" : x1 - x2, "y" : y1 - y2]
+        
+    } else {
+        print ("At least one passed in dictionary was nil; returning empty point 0")
+        
+        return ["Empty Point" : 0];
+    }
+    
+    
+    //return ["x" : p1["x"]! + p2["x"]!, "y" : p1["y"]! + p2["y"]!]
+}
+
+func subtract(p1: ([String : Int])?, p2: ([String : Int])?) -> [String : Int]? {
+    
+    if (p1 != nil && p2 != nil) {
+        
+        //if p1!["x"] is Int
+        
+        /*let x1 = p1!["x"]!// as! Double
+        let x2 = p2!["x"]!// as! Double
+        let y1 = p1!["y"]!// as! Double
+        let y2 = p2!["y"]! //as! Double
+ */
+        
+        
+        /*let x1 = Double(p1!["x"])
+         let x2 = Double(p2!["x"])
+         
+         let y1 = Double(p1!["y"])
+         let y2 = Double(p2!["y"])
+         */
+        
+        return ["x" : p1!["x"]! - p2!["x"]!, "y" : p1!["y"]! - p2!["y"]!]
+        
+        //return ["x" : x1 - x2, "y" : y1 - y2]
+        
+    } else {
+        print ("At least one passed in dictionary was nil; returning empty point 0")
+        
+        return ["Empty Point" : 0];
+    }
+    
+    
+    //return ["x" : p1["x"]! + p2["x"]!, "y" : p1["y"]! + p2["y"]!]
+}
+
+
+/*func subtract(p1: ([String : Any])?, p2: ([String : Any])?) -> [String : Double]? {
+    
+    if (p1 != nil && p2 != nil) {
+        
+        let x1 = p1?["x"] as! Double
+        let x2 = p2?["x"] as! Double
+        
+        let y1 = p1?["y"] as! Double
+        let y2 = p2?["y"] as! Double
+        
+        return ["x" : x1 - x2, "y" : y1 - y2]
+        
+        //return ["x" : Double(p1!["x"]!) - p2!["x"]!, "y" : Double(p1!["y"]!) - p2!["y"]!]
+        
+    } else {
+        print ("At least one passed in dictionary was nil; returning empty point 0")
+        
+        return ["Empty Point" : 0];
+    }
+
+    
+    //return ["x" : p1["x"]! - p2["x"]!, "y" : p1["y"]! - p2["y"]!]
+}
+*/
 
 
 
